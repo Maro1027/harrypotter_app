@@ -1,38 +1,103 @@
-.App {
+.card_container {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  border: none;
+  outline: none;
+  background: #cacaca;
+  padding: 10px 20px;
+  margin: 0 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.buttons button:hover {
+  background: #fff;
+}
+
+.buttons button.is-active {
+  pointer-events: none;
+  background: #fff;
+  box-shadow: 0px 0px 12px #fff;
+}
+
+.search_title {
+  color: #fff;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: rgba("#fff", 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+.button_submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  border: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.button_submit:hover {
+  opacity: 0.6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nodata {
+  color: #fff;
+  text-align: center;
+}
+
+.button_return {
+  display: flex;
+  justify-content: center;
+}
+
+.button_return a {
+  color: #000;
+  border: none;
+  outline: none;
+  background: #cacaca;
+  padding: 10px 20px;
+  margin: 0 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 14px;
+}
+
+.button_return a:hover {
+  background: #fff;
+  box-shadow: 0px 0px 12px #fff;
 }

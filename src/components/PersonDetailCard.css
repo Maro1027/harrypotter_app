@@ -1,0 +1,21 @@
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin: 50px;
+}
+
+.detail_image {
+  max-width: 200px;
+}
+
+.detail_image img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.detail_info {
+  color: #fff;
+}
