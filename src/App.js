@@ -7,7 +7,7 @@ import PersonDetail from "./pages/PersonDetail";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/harrypotter_app">
         <Navbar />
         <Routes>
           <Route
